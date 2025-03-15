@@ -29,9 +29,7 @@ This Python script helps you merge AI-generated translations into your iOS **Str
 4. **Run the Script:**  
    ```bash
    python main.py
-
-
-
+```
 # Prompt for LLM
 
 I am working on translating an iOS app using a **String Catalog (`.xcstrings`)**. I have a base English translation in JSON format, and I need you to generate a full translation into my desired language.
