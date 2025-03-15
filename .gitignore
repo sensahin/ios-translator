@@ -174,3 +174,5 @@ model/
 downloads/
 
 translations/*.json
+
+.DS_Store

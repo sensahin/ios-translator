@@ -36,26 +36,5 @@ I am working on translating an iOS app using a **String Catalog (`.xcstrings`)**
 
 ### **Instructions:**
 1. **Use the provided English base template (`base_template.json`)** and translate all the strings.
-2. **Preserve the JSON structure exactly** but replace English strings with the translated text.
-3. **Ensure correct encoding (UTF-8) for special characters**.
-4. **Maintain the `"sourceLanguage"` field and update `"localizations"`** with the target language code.
-5. **Do not alter keys—only translate the values.**
-
-### **Example of Expected Output (Simplified)**
-#### **Input (`base_template.json` - English)**
-```json
-{
-  "sourceLanguage": "en",
-  "strings": {
-    "welcome_message": {
-      "localizations": {
-        "en": "Welcome to our app!"
-      }
-    },
-    "exit_prompt": {
-      "localizations": {
-        "en": "Are you sure you want to exit?"
-      }
-    }
-  }
-}
+2. **Ensure correct encoding (UTF-8) for special characters**.
+3. **Do not alter keys—only translate the values.**
