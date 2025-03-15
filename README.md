@@ -45,6 +45,7 @@ I am working on translating an iOS app using a **String Catalog (`.xcstrings`)**
 ---
 
 ### **Example of Expected Output**
+
 #### **Input (`base_template.json` - English)**
 ```json
 {
@@ -72,3 +73,43 @@ I am working on translating an iOS app using a **String Catalog (`.xcstrings`)**
         }
     }
 }
+```
+
+#### **Output (`fr.json` - French)**
+```json
+{
+    "sourceLanguage": "fr",
+    "strings": {
+        "welcome_message": {
+            "localizations": {
+                "fr": {
+                    "stringUnit": {
+                        "state": "translated",
+                        "value": "Bienvenue dans notre application!"
+                    }
+                }
+            }
+        },
+        "%lld days ago": {
+            "localizations": {
+                "fr": {
+                    "stringUnit": {
+                        "state": "translated",
+                        "value": "Il y a %lld jours"
+                    }
+                }
+            }
+        }
+    }
+}
+```
+
+### Steps to Integrate
+
+- I will save the generated JSON file inside the translations/ folder.
+- Then, I will run my Python script to merge it with the base template.
+- Finally, I will copy the merged JSON back into my iOS String Catalog in Xcode.
+
+Target Language: <SPECIFY TARGET LANGUAGE>
+
+Now, please generate the JSON translation based on these instructions.
