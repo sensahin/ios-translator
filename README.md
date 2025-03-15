@@ -7,7 +7,6 @@ This Python script helps you merge AI-generated translations into your iOS **Str
 ```bash
     python3 -m venv env
     source env/bin/activate
-    pip install -r requirements.txt
 
 ## How It Works  
 
@@ -35,6 +34,41 @@ This Python script helps you merge AI-generated translations into your iOS **Str
 I am working on translating an iOS app using a **String Catalog (`.xcstrings`)**. I have a base English translation in JSON format, and I need you to generate a full translation into my desired language.
 
 ### **Instructions:**
-1. **Use the provided English base template (`base_template.json`)** and translate all the strings.
-2. **Ensure correct encoding (UTF-8) for special characters**.
-3. **Do not alter keys—only translate the values.**
+
+1. **Keep the JSON structure identical** to the example.
+2. **Only translate the `"value"` field** inside `"stringUnit"`.
+3. **Preserve placeholders like `%@`, `%lld`, etc.**, as they are dynamic content in iOS.
+4. **Ensure UTF-8 encoding** for special characters.
+5. **Maintain `"state": "translated"` for all entries**.
+6. **Use the correct language code in `"sourceLanguage"`**.
+
+---
+
+### **Example of Expected Output**
+#### **Input (`base_template.json` - English)**
+```json
+{
+    "sourceLanguage": "en",
+    "strings": {
+        "welcome_message": {
+            "localizations": {
+                "en": {
+                    "stringUnit": {
+                        "state": "translated",
+                        "value": "Welcome to our app!"
+                    }
+                }
+            }
+        },
+        "%lld days ago": {
+            "localizations": {
+                "en": {
+                    "stringUnit": {
+                        "state": "translated",
+                        "value": "%lld days ago"
+                    }
+                }
+            }
+        }
+    }
+}
